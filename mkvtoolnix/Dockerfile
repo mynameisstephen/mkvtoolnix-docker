@@ -1,4 +1,5 @@
 FROM ubuntu:latest
+CMD ["/sbin/my_init"]
 RUN wget -q -O - https://www.bunkus.org/gpg-pub-moritzbunkus.txt | sudo apt-key add -
 RUN add-apt-repository "deb http://www.bunkus.org/ubuntu/trusty/ ./"
 RUN apt-get update
